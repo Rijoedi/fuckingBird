@@ -13,6 +13,7 @@ public class Game extends SurfaceView implements Runnable {
 
     private boolean isRunning = true;
     private final SurfaceHolder holder = getHolder();
+
     private Tori tori;
 
 
@@ -23,7 +24,7 @@ public class Game extends SurfaceView implements Runnable {
     }
 
     private void YousoSyokika() {
-        this.tori = new Tori();
+        tori = new Tori();
     }
 
     @Override
@@ -31,13 +32,12 @@ public class Game extends SurfaceView implements Runnable {
         while(isRunning) {
             if(!holder.getSurface().isValid()) continue;
             System.out.print("RUNに入りました");
-            //desenho dos componentes do jogos
+
             Canvas canvas = holder.lockCanvas();
-            //desenhando o passaro na tela
+
             tori.paint(canvas);
 
             holder.unlockCanvasAndPost(canvas);
-
 
         }
 
@@ -50,7 +50,6 @@ public class Game extends SurfaceView implements Runnable {
     public void tomaru() {
         isRunning = false;
     }
-
 
 
 }

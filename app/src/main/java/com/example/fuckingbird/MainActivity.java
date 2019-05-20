@@ -15,23 +15,23 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FrameLayout findViewById = findViewById(R.id.container);
+        FrameLayout container = findViewById(R.id.container);
 
-        Game game = new Game(this);
-        findViewById.addView(game);
+        game = new Game(this);
+        container.addView(this.game);
     }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        game.hajime();
-//        new Thread(game).start();
-//    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        game.hajime();
+        new Thread(game).start();
+    }
 
     @Override
     protected void onPause() {
         super.onPause();
-        this.game.tomaru();
+        game.tomaru();
     }
 }
 
