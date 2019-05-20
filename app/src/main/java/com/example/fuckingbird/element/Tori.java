@@ -19,6 +19,10 @@ public class Tori {
         this.takasa = 100;
     }
 
+    public void otiru() {
+        this.takasa += 10;
+    }
+
     public void paint(Canvas canvas) {
         canvas.drawCircle(X,takasa,HANKEI,RED);
     }
