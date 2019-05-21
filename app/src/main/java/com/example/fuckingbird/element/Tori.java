@@ -10,8 +10,8 @@ import com.example.fuckingbird.graphic.Iro;
 
 public class Tori {
 
-    private static final float X = 100;
-    private static final int HANKEI = 50;
+    private static final float X = 300;
+    private static final int HANKEI = 100;
     private static final Paint RED = Iro.getToriNoIro();
     private float takasa;
 
@@ -20,7 +20,11 @@ public class Tori {
     }
 
     public void otiru() {
-        this.takasa += 10;
+        this.takasa += 20;
+    }
+
+    public void tobu(){
+        this.takasa -= 20;
     }
 
     public void paint(Canvas canvas) {
